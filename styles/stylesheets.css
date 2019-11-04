@@ -1,0 +1,440 @@
+* {
+    font-family: sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    color: #323232;
+}
+
+body {
+    text-align: center;
+}
+
+/* NAVIGATIE!!!!!!! */
+
+/* Hamburger menu */
+nav {
+    background-color: black;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 10px 0px;
+}
+
+nav ul li {
+    text-align: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: lightgray;
+}
+
+nav form {
+    display: none;
+}
+
+.logo {
+    width: 20px;
+    padding: 10px 0px;
+}
+
+/* burgermenu  styling*/
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+
+.burger {
+    display: none;
+}
+
+/* Breakpoint hamburger menu */
+@media screen and (max-width: 1125px) {
+
+    /* inhoud pop-up menu*/
+    .navigatie {
+        right: 0;
+        width: 99%;
+        height: 500px;
+        position: absolute;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-150%);
+        transition: 0.5s ease-in;
+        z-index: -999;
+        padding: 20px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 10vh;
+        padding-left: 35px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+    }
+
+    li {
+        padding-left: 60px;
+        border-bottom: 1px solid #323232;
+    }
+
+    /* hamburgermenu komt tevoorschijn */
+    .burger {
+        display: block;
+        cursor: pointer;
+        margin: 20px 30px 0 0;
+        margin-left: auto;
+    }
+
+    /* verplaatst de content in de hamburger menu*/
+    .nav-active {
+        transform: translateY(52%);
+        z-index: 1;
+    }
+
+    nav form {
+        display: block;
+        border: 1px solid #323232;
+        max-width: 400px;
+        max-height: 40px;
+        margin: auto;
+        padding: 0px 0px 5px 10px;
+        text-align: left;
+        background-color: #323232;
+    }
+
+    .mini-icon {
+        width: 4%;
+    }
+
+    nav form input {
+        border: none;
+        font-size: 1em;
+        margin-left: 10px;
+        background-color: #323232;
+        width: 200px;
+        margin-bottom: 300px;
+    }
+}
+}
+
+/* Standaard pagina onderdelen */
+
+h1 {
+    font-weight: 500;
+}
+
+main {
+    width: 100vw;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+img {
+    width: 100%;
+}
+
+section > div > article {
+    margin-bottom: 30px;
+}
+
+
+/* zoekbalk supportpagina */
+form {
+    border: 1px solid lightgray;
+    max-width: 400px;
+    max-height: 30px;
+    margin: auto;
+    padding: 5px 0px 0px 10px;
+    text-align: left;
+    background-color: white;
+}
+
+.mini-icon {
+    width: 4%;
+}
+
+input {
+    border: none;
+    font-size: 1em;
+    margin-left: 10px;
+    background-color: white;
+}
+
+/* Iconen op apple support pagina */
+.container {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    padding: 50px 0px;
+    border-bottom: 1px solid lightgray;
+}
+
+.icons {
+    width: 80px;
+}
+
+.icons a {
+    color: black;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+/* artikelen op support pagina */
+.ondermargin {
+    margin-bottom: 0 auto 30px auto;
+}
+
+.image {
+    max-width: 500px;
+}
+
+/* verborgen afbeelding, komt pas tevoorschijn bij 1070px */
+.hiddenimage {
+    max-width: 300px;
+    display: none;
+}
+
+/* Speciale aanpassingen voor afbeeldingen */
+.imagerepareren {
+    max-width: 250px;
+}
+
+.kaartjes {
+    max-width: 200px;
+}
+
+.groterepadding {
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 40px;
+}
+
+.verandergrootte {
+    max-width: 500px;
+}
+
+/* OPMAAK */
+/* Alle artikelen met een zwarte achtergrond */
+.zwart {
+    background-color: black;
+    padding-top: 50px;
+}
+
+.wittetekst {
+    color: white;
+}
+
+/* Grijze tekstkleur */
+.grijs {
+    color: grey;
+}
+
+/* Is verplicht binnen een article, maar niets in deze richting is op apple site te zien, vandaar hier onzichtbaar maken */
+h2 {
+    visibility: hidden;
+}
+
+/* lijn onder de articelen, en toevoeging padding */
+.margline {
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 40px;
+}
+
+/* tweede artikel homepage, hele grote afbeelding */
+.kleiner {
+    max-height: 500px;
+    max-width: 400px
+}
+
+/* Links */
+a {
+    background-color: none;
+    list-style: none;
+    text-decoration: none;
+    color: dodgerblue;
+    display: flex;
+    justify-content: center;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
+.onder {
+    background-color: lightgray;
+    color: dimgray;
+    border: none;
+}
+
+.minitekst {
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+.onder ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 0.5px solid dimgray;
+    list-style: none;
+}
+
+.onder ul li {
+    font-size: 14px;
+    text-align: left;
+    border-bottom: none;
+    padding-left: 10px
+}
+
+.onder ul li img {
+    float: right;
+}
+
+/* BREAKPOINT vanaf iPad maat */
+@media screen and (min-width: 750px) {
+    main {
+        margin-left: 0;
+    }
+    
+    p, h3 {
+        max-width: 600px;
+        margin: auto;
+    }
+    
+    h3 {
+        padding: 30px 0px 0px;
+    }
+
+    /* Het geven van background-image, apple support */
+    .achtergrond {
+        display: none;
+    }
+
+    .geefachtergrond {
+        background-image: url(../images/applesupport.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 300px;
+    }
+
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    section > div > article {
+        margin-bottom: 70px;
+    }
+
+    .image {
+        float: left;
+        overflow: auto;
+        max-width: 250px;
+    }
+
+    .imagerepareren {
+        float: left;
+        overflow: auto;
+        max-width: 250px;
+    }
+
+    .kaartjes {
+        float: left;
+        overflow: auto;
+    }
+
+    .groterepadding {
+        border-bottom: 1px solid lightgray;
+        padding-bottom: 100px;
+    }
+
+    .margline {
+        padding: 0px 100px 40px 100px;
+    }
+        /* img verwijderen, zodat er later een background image voor in de plaats kan komen */
+    .achtergrond {
+        display: none;
+    }
+
+    /* Tekst op afbeelding plaatsen */
+    #geefachtergrond2 > h3,
+    #geefachtergrond2 > p {
+        color: white;
+        text-align: left;
+        max-width: 300px;
+        padding: 30px 0px 0px 0px;
+        font-weight: normal;
+        margin: 0;
+    }
+
+    #geefachtergrond2 > a {
+        text-align: left;
+        max-width: 300px;
+        padding-top: 10px;
+    }
+
+    #geefachtergrond2 {
+        background-image: url(../images/s.foto4.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 300px;
+        align-content: left;
+    }
+    
+}
+
+/* BREAKPOINT vanaf desktop maat */
+@media screen and (min-width: 1070px) {
+    .container {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .image {
+        float: none;
+        max-width: 500px;
+    }
+
+    .imageright {
+        float: right;
+        overflow: auto;
+    }
+
+    section > div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    section > div > article {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+
+    .hiddenimage {
+        display: block;
+        float: right;
+    }
+
+}
